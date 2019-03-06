@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <title>doing math and junk with javascript</title>
+</head>
+<body>
+  <h2>Check console to see the madness!</h2>
+
+  <script>
+    $(document).ready(function() {
+    var videoLengths = [
+      video = {
+        minutes: 7,
+        seconds: 39,
+      },
+      video2 = {
+        minutes: 7,
+        seconds: 45,
+      },
+      video3 = {
+        minutes: 10,
+        seconds: 23,
+      },
+      video4 = {
+        minutes: 7,
+        seconds: 10,
+      }  ,    
+      video5 = {
+        minutes: 13,
+        seconds: 10,
+      },
+      video6 = {
+        minutes: 9,
+        seconds: 43,
+      }     , 
+      video7 = {
+        minutes: 6,
+        seconds: 17,
+      },
+      video8 = {
+        minutes: 4,
+        seconds: 50,
+      }  ,    
+      video9 = {
+        minutes: 6,
+        seconds: 05,
+      },
+      video10 = {
+        minutes: 7,
+        seconds: 55,
+      }  ,    
+      video11 = {
+        minutes: 18,
+        seconds: 14,
+      },
+      video12 = {
+        minutes: 8,
+        seconds: 42,
+      }    ,  
+      video13 = {
+        minutes: 10,
+        seconds: 50,
+      },
+      video14 = {
+        minutes: 7,
+        seconds: 10,
+      } ,     
+      video15 = {
+        minutes: 11,
+        seconds: 24,
+      },
+      video16 = {
+        minutes: 16,
+        seconds: 52,
+      },      
+      video17 = {
+        minutes: 9,
+        seconds: 39,
+      }
+              
+    ];
+var globalminutes=0;
+var globalseconds=0;
+var total;
+
+videoLengths.forEach(function(element){
+  globalminutes += element.minutes;
+  globalseconds += element.seconds;
+      });
+  total = Math.floor(globalminutes/60)+ " hours, " + (Math.floor(globalminutes/60) + Math.floor(globalseconds/60))+" minutes, and "+ globalseconds%60+ " seconds.";
+    $("h2").text(total+" Plus a 55:51 video of psuedo-coding");
+    console.log(globalminutes);
+    console.log(globalseconds);
+
+    });
+</script>
+
+</body>
+</html>
