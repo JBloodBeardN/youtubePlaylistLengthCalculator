@@ -90,7 +90,7 @@ videoLengths.forEach(function(element){
   globalminutes += element.minutes;
   globalseconds += element.seconds;
       });
-  total = Math.floor(globalminutes/60)+ " hours, " + (Math.floor(globalminutes/60) + Math.floor(globalseconds/60))+" minutes, and "+ globalseconds%60+ " seconds.";
+  total = Math.floor(globalminutes/60)+ " hours, " + (Math.floor(globalminutes%60) + Math.floor(globalseconds/60))+" minutes, and "+ globalseconds%60+ " seconds.";
     $("h2").text(total+" Plus a 55:51 video of psuedo-coding");
     console.log(globalminutes);
     console.log(globalseconds);
